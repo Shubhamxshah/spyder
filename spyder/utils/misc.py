@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 
 def __remove_pyc_pyo(fname):
-    """Eventually remove .pyc and .pyo files associated to a Python script"""
+    """Eventually remove .pyc and .pyo files associated to a Python file"""
     if osp.splitext(fname)[1] == '.py':
         for ending in ('c', 'o'):
             if osp.exists(fname+ending):
@@ -33,7 +33,7 @@ def __remove_pyc_pyo(fname):
 def rename_file(source, dest):
     """
     Rename file from *source* to *dest*
-    If file is a Python script, also rename .pyc and .pyo files if any
+    If file is a Python file, also rename .pyc and .pyo files if any
     """
     os.rename(source, dest)
     __remove_pyc_pyo(source)
@@ -42,7 +42,7 @@ def rename_file(source, dest):
 def remove_file(fname):
     """
     Remove file *fname*
-    If file is a Python script, also rename .pyc and .pyo files if any
+    If file is a Python file, also rename .pyc and .pyo files if any
     """
     os.remove(fname)
     __remove_pyc_pyo(fname)
@@ -51,7 +51,7 @@ def remove_file(fname):
 def move_file(source, dest):
     """
     Move file from *source* to *dest*
-    If file is a Python script, also rename .pyc and .pyo files if any
+    If file is a Python file, also rename .pyc and .pyo files if any
     """
     import shutil
     shutil.copy(source, dest)
@@ -198,8 +198,8 @@ def monkeypatch_method(cls, patch_name):
     return decorator
 
 
-def is_python_script(fname):
-    """Is it a valid Python script?"""
+def is_Python_file(fname):
+    """Is it a valid Python file?"""
     return osp.isfile(fname) and fname.endswith(('.py', '.pyw', '.ipy'))
 
 

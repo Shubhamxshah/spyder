@@ -222,7 +222,7 @@ things, use the script
 
 .. code:: bash
 
-   python scripts/run_ui_css_edition.py
+   Python files/run_ui_css_edition.py
 
 This creates a loop that restarts the application, process ui and css
 files.

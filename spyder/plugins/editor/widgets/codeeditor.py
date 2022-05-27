@@ -3856,7 +3856,7 @@ class CodeEditor(TextEditBaseWidget):
 
     @Slot()
     def convert_notebook(self):
-        """Convert an IPython notebook to a Python script in editor"""
+        """Convert an IPython notebook to a Python file in editor"""
         try:
             nb = nbformat.reads(self.toPlainText(), as_version=4)
             script = nbexporter().from_notebook_node(nb)[0]
@@ -4412,7 +4412,7 @@ class CodeEditor(TextEditBaseWidget):
             self, _("Clear all ouput"), icon=ima.icon('ipython_console'),
             triggered=self.clear_all_output)
         self.ipynb_convert_action = create_action(
-            self, _("Convert to Python script"), icon=ima.icon('python'),
+            self, _("Convert to Python file"), icon=ima.icon('python'),
             triggered=self.convert_notebook)
         self.gotodef_action = create_action(
             self, _("Go to definition"),

@@ -477,7 +477,7 @@ class JupyterWidget(IPythonWidget):
     #---------------------------------------------------------------------------
 
     def _edit(self, filename, line=None):
-        """ Opens a Python script for editing.
+        """ Opens a Python file for editing.
 
         Parameters
         ----------

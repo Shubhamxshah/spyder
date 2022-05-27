@@ -463,7 +463,7 @@ In this release 31 pull requests were closed.
 * [Issue 6962](https://github.com/spyder-ide/spyder/issues/6962) - Add Astropy to default UMR blacklist for Python 2.7 due to resulting bug ([PR 7168](https://github.com/spyder-ide/spyder/pull/7168))
 * [Issue 6942](https://github.com/spyder-ide/spyder/issues/6942) - Error when viewing bytes in the Variable Explorer ([PR 7206](https://github.com/spyder-ide/spyder/pull/7206))
 * [Issue 6901](https://github.com/spyder-ide/spyder/issues/6901) - OSError: [Errno 28] No space left on device ([PR 7210](https://github.com/spyder-ide/spyder/pull/7210))
-* [Issue 6899](https://github.com/spyder-ide/spyder/issues/6899) - Spyder opens new instances when double-clicking Python scripts ([PR 7260](https://github.com/spyder-ide/spyder/pull/7260))
+* [Issue 6899](https://github.com/spyder-ide/spyder/issues/6899) - Spyder opens new instances when double-clicking Python files ([PR 7260](https://github.com/spyder-ide/spyder/pull/7260))
 * [Issue 6889](https://github.com/spyder-ide/spyder/issues/6889) - Remove support for PyQt4 ([PR 6961](https://github.com/spyder-ide/spyder/pull/6961))
 * [Issue 6887](https://github.com/spyder-ide/spyder/issues/6887) - Include Matplotlib in Help > Dependencies ([PR 7166](https://github.com/spyder-ide/spyder/pull/7166))
 * [Issue 6886](https://github.com/spyder-ide/spyder/issues/6886) - Spyder fails to start when trying to set language on Windows ([PR 7159](https://github.com/spyder-ide/spyder/pull/7159))
@@ -2494,7 +2494,7 @@ In this release 22 issues were closed
 * [PR 3228](https://github.com/spyder-ide/spyder/pull/3228) - Fix a bug preventing Spyder to open external file In Mac application
 * [PR 3227](https://github.com/spyder-ide/spyder/pull/3227) - Fix keyboard interrupt handling in plugin_server.py
 * [PR 3222](https://github.com/spyder-ide/spyder/pull/3222) - Variable explorer: Disregard list1 when sorting list1 against list2
-* [PR 3218](https://github.com/spyder-ide/spyder/pull/3218) - PR: Allow empty wdir option to run_python_script_in_terminal
+* [PR 3218](https://github.com/spyder-ide/spyder/pull/3218) - PR: Allow empty wdir option to run_Python_file_in_terminal
 * [PR 3217](https://github.com/spyder-ide/spyder/pull/3217) - Fix icon name in conda windows build script.
 * [PR 3210](https://github.com/spyder-ide/spyder/pull/3210) - PR: Follow the Flask plugin model instead of namespace packages
 * [PR 3209](https://github.com/spyder-ide/spyder/pull/3209) - Fix undefined `backends` when starting IPython kernel

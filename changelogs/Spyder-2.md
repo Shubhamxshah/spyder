@@ -686,7 +686,7 @@ In this release 6 pull requests were merged
     * It can now show mathematical equations written in Latex, using the MathJax Sphinx plugin.
     * Rich text docs are now rendered in a thread to avoid UI lookup.
 * **Single instance mode**
-    * Users can now open Python scripts from their file explorer on the currently available instance.
+    * Users can now open Python files from their file explorer on the currently available instance.
     * Linux users can also open their files from the terminal.
 * Spanish translation of the interface
 
@@ -695,7 +695,7 @@ In this release 6 pull requests were merged
 * [Issue 318](../../issues/318) - Create a widget to list all breakpoints
 * [Issue 349](../../issues/349) - Add "Run selection or current block" action to Editor's context menu
 * [Issue 448](../../issues/448) - Editor: disable code-related features inside comments (code completion, auto-indentation, ...)
-* [Issue 466](../../issues/466) - Can't use Spyder to open python scripts (.py files) from the terminal or the file explorer
+* [Issue 466](../../issues/466) - Can't use Spyder to open Python files (.py files) from the terminal or the file explorer
 * [Issue 554](../../issues/554) - Improved debugger integration
 * [Issue 609](../../issues/609) - Debugging: Unsetting a breakpoint in the editor isn't reflected until you restart debugging entirely
 * [Issue 650](../../issues/650) - After deleting a directory set as working directory and changing to a new working directory the script won't run
@@ -879,7 +879,7 @@ In this release 6 pull requests were merged
     * Spyder menu bar: fixed menu ordering issue with Ubuntu/Unity
     * All console widgets: Shell widget: fixed "Clear terminal" (Ctrl+L) shortcut
 * Console:
-    * Cleaned up widget interactions after Python script execution (before this changeset, it was possible to send data to console, which not only was not needed but was generating disturbing errors in the internal console...)
+    * Cleaned up widget interactions after Python file execution (before this changeset, it was possible to send data to console, which not only was not needed but was generating disturbing errors in the internal console...)
 * Editor:
     * If user accept to fix "mixed end-of-line characters", when opening file, the current editor was set as "modified" (the tab title had a `*` at the end) instead of the newly created editor
     * "occurrence highlighting" was highlighting previous word even if there was a whitespace between cursor and this word
@@ -1390,7 +1390,7 @@ Since version 2.1:
 * Preferences dialog box/Keyboard shortcuts:
     * conflicts are now ignored if shortcuts have different contexts *except* if one of this context is '`_`' (i.e. global context)
     * conflict warnings are now also shown when showing the preferences dialog box (not only when modifying shortcuts and applying changes)
-* Drag/drop Python script to console: fixed TypeError (TypeError: start() got an unexpected keyword argument 'ask_for_arguments')
+* Drag/drop Python file to console: fixed TypeError (TypeError: start() got an unexpected keyword argument 'ask_for_arguments')
 * Console base widget: added support for FF (Form Feed) ANSI sequence - Fixes bug in IPython console: 'cls' and 'clear' magic commands were inactive in IPython consoles
 * Editor: code completion was sometimes very slow when editing files within a Spyder project
 * Code editor: fixed "Delete line" feature (Ctrl+D) / was not working with multiline selection

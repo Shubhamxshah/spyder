@@ -59,7 +59,7 @@ def fixpath(path):
 
 
 def create_script(fname):
-    """Create a new Python script"""
+    """Create a new Python file"""
     text = os.linesep.join(["# -*- coding: utf-8 -*-", "", ""])
     try:
         encoding.write(str(text), fname, 'utf-8')

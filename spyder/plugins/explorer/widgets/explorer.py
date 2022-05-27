@@ -485,7 +485,7 @@ class DirView(QTreeView, SpyderWidgetMixin):
         # Notebook Actions
         ipynb_convert_action = self.create_action(
             DirViewActions.ConvertNotebook,
-            _("Convert to Python script"),
+            _("Convert to Python file"),
             icon=ima.icon('python'),
             triggered=lambda: self.convert_notebooks()
         )
@@ -1299,7 +1299,7 @@ class DirView(QTreeView, SpyderWidgetMixin):
 
     @Slot()
     def run(self, fnames=None):
-        """Run Python scripts"""
+        """Run Python files"""
         if fnames is None:
             fnames = self.get_selected_filenames()
         for fname in fnames:
@@ -1671,7 +1671,7 @@ class DirView(QTreeView, SpyderWidgetMixin):
         self.fsmodel.setIconProvider(IconProvider(self))
 
     def convert_notebook(self, fname):
-        """Convert an IPython notebook to a Python script in editor"""
+        """Convert an IPython notebook to a Python file in editor"""
         try:
             script = nbexporter().from_filename(fname)[0]
         except Exception as e:
@@ -1683,7 +1683,7 @@ class DirView(QTreeView, SpyderWidgetMixin):
         self.sig_file_created.emit(script)
 
     def convert_notebooks(self):
-        """Convert IPython notebooks to Python scripts in editor"""
+        """Convert IPython notebooks to Python files in editor"""
         fnames = self.get_selected_filenames()
         if not isinstance(fnames, (tuple, list)):
             fnames = [fnames]

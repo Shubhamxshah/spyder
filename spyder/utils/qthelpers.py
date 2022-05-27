@@ -499,14 +499,14 @@ def create_program_action(parent, text, name, icon=None, nt_name=None):
                              triggered=lambda: programs.run_program(name))
 
 
-def create_python_script_action(parent, text, icon, package, module, args=[]):
-    """Create action to run a GUI based Python script"""
+def create_Python_file_action(parent, text, icon, package, module, args=[]):
+    """Create action to run a GUI based Python file"""
     if is_text_string(icon):
         icon = ima.get_icon(icon)
-    if programs.python_script_exists(package, module):
+    if programs.Python_file_exists(package, module):
         return create_action(parent, text, icon=icon,
                              triggered=lambda:
-                             programs.run_python_script(package, module, args))
+                             programs.run_Python_file(package, module, args))
 
 
 class DialogManager(QObject):

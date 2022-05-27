@@ -1732,7 +1732,7 @@ msgid "&Run..."
 msgstr "実行 (&R)"
 
 #: spyder/plugins/console/widgets/main_widget.py:191
-msgid "Run a Python script"
+msgid "Run a Python file"
 msgstr "Pythonスクリプトを実行"
 
 #: spyder/plugins/console/widgets/main_widget.py:197
@@ -1780,11 +1780,11 @@ msgid "Internal console settings"
 msgstr "内部コンソール設定"
 
 #: spyder/plugins/console/widgets/main_widget.py:509
-msgid "Run Python script"
+msgid "Run Python file"
 msgstr "Pythonスクリプトを実行"
 
 #: spyder/plugins/console/widgets/main_widget.py:511 spyder/plugins/profiler/widgets/main_widget.py:460
-msgid "Python scripts"
+msgid "Python files"
 msgstr "Pythonスクリプト"
 
 #: spyder/plugins/console/widgets/main_widget.py:568
@@ -2694,7 +2694,7 @@ msgid "Clear all ouput"
 msgstr "全ての出力をクリア"
 
 #: spyder/plugins/editor/widgets/codeeditor.py:4414 spyder/plugins/explorer/widgets/explorer.py:488
-msgid "Convert to Python script"
+msgid "Convert to Python file"
 msgstr "Pythonスクリプトへ変換"
 
 #: spyder/plugins/editor/widgets/codeeditor.py:4417
@@ -4490,7 +4490,7 @@ msgid "Enable UMR"
 msgstr "UMRを有効化"
 
 #: spyder/plugins/maininterpreter/confpage.py:135
-msgid "This option will enable the User Module Reloader (UMR) in Python/IPython consoles. UMR forces Python to reload deeply modules during import when running a Python script using the Spyder's builtin function <b>runfile</b>.<br><br><b>1.</b> UMR may require to restart the console in which it will be called (otherwise only newly imported modules will be reloaded when executing files).<br><br><b>2.</b> If errors occur when re-running a PyQt-based program, please check that the Qt objects are properly destroyed (e.g. you may have to use the attribute <b>Qt.WA_DeleteOnClose</b> on your main window, using the <b>setAttribute</b> method)"
+msgid "This option will enable the User Module Reloader (UMR) in Python/IPython consoles. UMR forces Python to reload deeply modules during import when running a Python file using the Spyder's builtin function <b>runfile</b>.<br><br><b>1.</b> UMR may require to restart the console in which it will be called (otherwise only newly imported modules will be reloaded when executing files).<br><br><b>2.</b> If errors occur when re-running a PyQt-based program, please check that the Qt objects are properly destroyed (e.g. you may have to use the attribute <b>Qt.WA_DeleteOnClose</b> on your main window, using the <b>setAttribute</b> method)"
 msgstr "このオプションはPython/IPython コンソールでのユーザーモジュールリローダー (UMR) を有効化します。UMRはSpyderの組み込み関数<b>runfile</b>を使うPythonスクリプトを実行する場合、インポート時にモジュールの再読み込みを強制します。<br><br><b>1.</b> UMRは実行するコンソールの再起動を必要とする場合が有ります(あるいはスクリプト実行時に新しくインポートされたモジュールのみが再読み込みされます) 。<br><br><b>2.</b> PyQtを使ったプログラムの再実行時にエラーが発生した場合、Qtオブジェクトが適切に破棄されているか確認してください。(例： <b>setAttribute</b>メソッドを使ってアトリビュート<b>Qt.WA_DeleteOnClose</b> をメインウインドウに適用するなど) "
 
 #: spyder/plugins/maininterpreter/confpage.py:153
@@ -4882,7 +4882,7 @@ msgid "Run profiler"
 msgstr "プロファイラの実行"
 
 #: spyder/plugins/profiler/widgets/main_widget.py:217 spyder/plugins/profiler/widgets/main_widget.py:458
-msgid "Select Python script"
+msgid "Select Python file"
 msgstr "Pythonスクリプトを選択"
 
 #: spyder/plugins/profiler/widgets/main_widget.py:223 spyder/plugins/pylint/main_widget.py:510

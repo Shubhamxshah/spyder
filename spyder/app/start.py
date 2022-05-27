@@ -68,7 +68,7 @@ def send_args_to_spyder(args):
     Simple socket client used to send the args passed to the Spyder
     executable to an already running instance.
 
-    Args can be Python scripts or files with these extensions: .spydata, .mat,
+    Args can be Python files with these extensions: .spydata, .mat,
     .npy, or .h5, which can be imported by the Variable Explorer.
     """
     from spyder.config.manager import CONF

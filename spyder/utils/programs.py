@@ -644,9 +644,9 @@ def open_files_with_application(app_path, fnames):
     return return_codes
 
 
-def python_script_exists(package=None, module=None):
+def Python_file_exists(package=None, module=None):
     """
-    Return absolute path if Python script exists (otherwise, return None)
+    Return absolute path if Python file exists (otherwise, return None)
     package=None -> module is in sys.path (standard library modules)
     """
     assert module is not None
@@ -669,14 +669,14 @@ def python_script_exists(package=None, module=None):
             return path
 
 
-def run_python_script(package=None, module=None, args=[], p_args=[]):
+def run_Python_file(package=None, module=None, args=[], p_args=[]):
     """
-    Run Python script in a separate process
+    Run Python file in a separate process
     package=None -> module is in sys.path (standard library modules)
     """
     assert module is not None
     assert isinstance(args, (tuple, list)) and isinstance(p_args, (tuple, list))
-    path = python_script_exists(package, module)
+    path = Python_file_exists(package, module)
     run_program(sys.executable, p_args + [path] + args)
 
 
@@ -720,10 +720,10 @@ def get_python_args(fname, python_args, interact, debug, end_args):
     return p_args
 
 
-def run_python_script_in_terminal(fname, wdir, args, interact,
+def run_Python_file_in_terminal(fname, wdir, args, interact,
                                   debug, python_args, executable=None):
     """
-    Run Python script in an external system terminal.
+    Run Python file in an external system terminal.
 
     :str wdir: working directory, may be empty.
     """

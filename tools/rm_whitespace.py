@@ -55,7 +55,7 @@ def git_files(file_types):
             raise RuntimeError("Must be in the root of a Git repo") from e
         # If subprocess.run doesn't exist or doesn't have the encoding arg
         except (TypeError, AttributeError):
-            raise RuntimeError("Python >=3.6 required to run script.")
+            raise RuntimeError("Python >=3.6 required to run file.")
         if status_output.stdout:
             files_final = files_final.union(
                 set(status_output.stdout.strip("\0").split("\0")))

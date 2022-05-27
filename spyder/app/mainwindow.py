@@ -1989,7 +1989,7 @@ def main(options, args):
     elif options.optimize:
         # Optimize the whole Spyder's source code directory
         import spyder
-        programs.run_python_script(module="compileall",
+        programs.run_python_file(module="compileall",
                                    args=[spyder.__path__[0]], p_args=['-O'])
         return
 

@@ -2900,7 +2900,7 @@ class Editor(SpyderPluginWidget, SpyderConfigurationObserver):
 
         return editor.toPlainText()
 
-    #------ Run Python script
+    #------ Run Python file
     @Slot()
     def edit_run_configurations(self):
         dialog = RunConfigDialog(self)
