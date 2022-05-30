@@ -4449,6 +4449,10 @@ class CodeEditor(TextEditBaseWidget):
             self, _("Debug cell"), icon=ima.icon('debug_cell'),
             shortcut=CONF.get_shortcut('editor', 'debug cell'),
             triggered=self.sig_debug_cell.emit)
+        self.inspect_current_object = create_action(
+            self,_("Inspect current object"),
+            shortcut=CONF.get_shortcut('editor', 'Inspect current object'),
+            triggered=self.sig_show_object_info.emit)
 
         # Zoom actions
         zoom_in_action = create_action(
@@ -4490,7 +4494,7 @@ class CodeEditor(TextEditBaseWidget):
         actions_1 = [self.run_cell_action, self.run_cell_and_advance_action,
                      self.re_run_last_cell_action, self.run_selection_action,
                      self.run_to_line_action, self.run_from_line_action,
-                     self.gotodef_action, None, self.undo_action,
+                     self.gotodef_action,self.inspect_current_object, None, self.undo_action,
                      self.redo_action, None, self.cut_action,
                      self.copy_action, self.paste_action, selectall_action]
         actions_2 = [None, zoom_in_action, zoom_out_action, zoom_reset_action,
@@ -5330,6 +5334,7 @@ class CodeEditor(TextEditBaseWidget):
         self.run_from_line_action.setVisible(self.is_python_or_ipython())
         self.re_run_last_cell_action.setVisible(self.is_python_or_ipython())
         self.gotodef_action.setVisible(self.go_to_definition_enabled)
+        self.inspect_current_object.setVisible(self.is_python_or_ipython())
 
         formatter = CONF.get(
             'completions',
